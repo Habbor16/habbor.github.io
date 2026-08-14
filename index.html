@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>HABBOR — Anime</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <svg class="brand-icon" viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+        <polygon class="brand-icon-frame" points="4,2 20,2 22,4 22,20 20,22 4,22 2,20 2,4" fill="none" stroke-width="1.6" />
+        <path class="brand-icon-play" d="M9 7l8 5-8 5V7z" />
+      </svg>
+      <span class="brand-name">HABBOR</span>
+    </div>
+
+    <div class="search-box">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+        <path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+      <input type="text" id="searchInput" placeholder="Buscar por título..." aria-label="Buscar por título" autocomplete="off" />
+    </div>
+  </header>
+
+  <section class="hero hidden" id="heroSection">
+    <div class="hero-backdrop" id="heroBackdrop"></div>
+    <div class="hero-scrim"></div>
+    <div class="hero-content">
+      <h2 class="hero-title" id="heroTitle"></h2>
+      <button class="hero-cta" id="heroPlayBtn" type="button">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        Reproducir
+      </button>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="page-heading">
+      <h1>En emisión</h1>
+      <span id="countBadge" class="count-badge"></span>
+    </div>
+
+    <section id="videoGrid" class="video-grid" aria-live="polite">
+      <!-- Las tarjetas se generan automáticamente desde app.js -->
+    </section>
+
+    <p id="emptyState" class="empty-state hidden"></p>
+  </main>
+
+  <div id="playerModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Cerrar reproductor">&times;</button>
+      <h2 id="modalTitle" class="modal-title"></h2>
+      <div class="player-frame">
+        <iframe
+          id="playerIframe"
+          src=""
+          title="Reproductor de video"
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
