@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>HABBOR — Directorio de Anime</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbarRoot" class="navbar"></div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2 class="sidebar-title">Categorías</h2>
+      <ul class="category-list">
+        <li><a href="catalogo.html" class="active">Shonen</a></li>
+        <li><a href="catalogo.html">Seinen</a></li>
+        <li><a href="catalogo.html">Fantasía</a></li>
+        <li><a href="catalogo.html">Romance</a></li>
+        <li><a href="catalogo.html">Ciencia Ficción</a></li>
+      </ul>
+      <h2 class="sidebar-title">Temporada Actual</h2>
+      <p class="sidebar-season">Verano 2026</p>
+    </aside>
+
+    <main class="main-col">
+      <section class="hero hidden" id="heroSection">
+        <button class="hero-arrow hero-arrow-left" id="heroPrev" aria-label="Anterior" type="button">‹</button>
+        <button class="hero-arrow hero-arrow-right" id="heroNext" aria-label="Siguiente" type="button">›</button>
+        <div class="hero-backdrop" id="heroBackdrop"></div>
+        <div class="hero-scrim"></div>
+        <div class="hero-content">
+          <span class="hero-eyebrow">NUEVOS EPISODIOS</span>
+          <h1 class="hero-title" id="heroTitle"></h1>
+          <a href="#" class="hero-cta" id="heroPlayBtn">▶ Ver ahora</a>
+        </div>
+        <div class="hero-dots" id="heroDots"></div>
+      </section>
+
+      <div class="section-heading">
+        <h2>Destacados de la semana</h2>
+      </div>
+      <section id="destacadosRow" class="video-grid"></section>
+    </main>
+
+    <aside class="ranking-panel">
+      <h2 class="sidebar-title">Lo más popular esta semana</h2>
+      <ol id="rankingList" class="ranking-list"></ol>
+    </aside>
+  </div>
+
+  <div id="footerRoot"></div>
+
+  <script>window.PAGE_ID = 'inicio';</script>
+  <script src="data.js"></script>
+  <script src="common.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

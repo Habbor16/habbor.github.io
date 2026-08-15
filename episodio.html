@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>HABBOR — Reproductor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbarRoot" class="navbar"></div>
+
+  <main class="watch-container">
+    <a href="catalogo.html" class="back-link">← Volver al catálogo</a>
+
+    <div class="player-frame large">
+      <iframe
+        id="playerIframe"
+        src=""
+        title="Reproductor de video"
+        allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="watch-meta">
+      <h1 id="watchTitle" class="watch-title"></h1>
+      <div class="watch-nav">
+        <button id="prevBtn" class="nav-btn" type="button">← Anterior</button>
+        <button id="nextBtn" class="nav-btn" type="button">Siguiente →</button>
+      </div>
+    </div>
+
+    <h2 class="section-heading-inline">Más episodios</h2>
+    <section id="moreGrid" class="video-grid"></section>
+  </main>
+
+  <div id="footerRoot"></div>
+
+  <script>window.PAGE_ID = '';</script>
+  <script src="data.js"></script>
+  <script src="common.js"></script>
+  <script src="episodio.js"></script>
+</body>
+</html>

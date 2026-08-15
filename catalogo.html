@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>HABBOR — Catálogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbarRoot" class="navbar"></div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2 class="sidebar-title">Categorías</h2>
+      <ul class="category-list">
+        <li><a href="catalogo.html" class="active">Todos</a></li>
+        <li><a href="catalogo.html">Shonen</a></li>
+        <li><a href="catalogo.html">Seinen</a></li>
+        <li><a href="catalogo.html">Fantasía</a></li>
+        <li><a href="catalogo.html">Romance</a></li>
+        <li><a href="catalogo.html">Ciencia Ficción</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-col main-col-wide">
+      <div class="page-heading">
+        <h1>Catálogo completo</h1>
+        <span id="countBadge" class="count-badge">000 TÍTULOS</span>
+      </div>
+      <section id="videoGrid" class="video-grid"></section>
+      <p id="emptyState" class="empty-state hidden"></p>
+    </main>
+  </div>
+
+  <div id="footerRoot"></div>
+
+  <script>window.PAGE_ID = 'catalogo';</script>
+  <script src="data.js"></script>
+  <script src="common.js"></script>
+  <script src="catalogo.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>HABBOR — Mi Lista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbarRoot" class="navbar"></div>
+
+  <main class="container">
+    <div class="page-heading">
+      <h1>Mi Lista</h1>
+      <span id="countBadge" class="count-badge">000 GUARDADOS</span>
+    </div>
+    <p class="hint-text">Por ahora esta lista no persiste entre páginas (no usa localStorage). Si vas a abrir HABBOR siempre desde Live Server, puedo activarle guardado real — solo dímelo.</p>
+    <section id="videoGrid" class="video-grid"></section>
+    <p id="emptyState" class="empty-state hidden">Aún no hay nada guardado aquí.</p>
+  </main>
+
+  <div id="footerRoot"></div>
+
+  <script>window.PAGE_ID = 'mi-lista';</script>
+  <script src="data.js"></script>
+  <script src="common.js"></script>
+  <script src="mi-lista.js"></script>
+</body>
+</html>

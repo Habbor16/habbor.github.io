@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>HABBOR — Cuenta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbarRoot" class="navbar"></div>
+
+  <main class="auth-container">
+    <div class="auth-card">
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tabLogin" type="button">Iniciar Sesión</button>
+        <button class="auth-tab" id="tabRegister" type="button">Registrarse</button>
+      </div>
+      <form id="authForm" class="auth-form">
+        <label>Correo electrónico
+          <input type="email" placeholder="tú@correo.com" required />
+        </label>
+        <label>Contraseña
+          <input type="password" placeholder="••••••••" required />
+        </label>
+        <label id="confirmField" class="hidden">Confirmar contraseña
+          <input type="password" placeholder="••••••••" />
+        </label>
+        <button type="submit" class="auth-submit" id="authSubmit">Iniciar sesión</button>
+      </form>
+      <p class="auth-note">Esta pantalla es solo visual: HABBOR corre localmente en tu navegador y no tiene servidor ni cuentas reales todavía.</p>
+    </div>
+  </main>
+
+  <div id="footerRoot"></div>
+
+  <script>window.PAGE_ID = '';</script>
+  <script src="data.js"></script>
+  <script src="common.js"></script>
+  <script src="cuenta.js"></script>
+</body>
+</html>
